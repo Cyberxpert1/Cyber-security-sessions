@@ -1,1 +1,120 @@
+Update user accounts
+sudo passwd kali  (enter in a new more complex password)
+sudo useradd -m username 
+sudo usermod -a -G sudo username 
+sudo chsh -s /bin/zsh username 
 
+Download Jython (https://www.jython.org/download.html) and add the .jar file
+to the Extender Options of burpsuite extension python section 
+
+foxy proxy standard 
+While Firefox is open use the shortcut CTRL+Shift+A or navigate 
+to https://addons.mozilla.org/en-US/firefox/addon.
+or
+Search for FoxyProxy Standard.
+Add FoxyProxy to Firefox.
+Install FoxyProxy Standard and add it
+to your browser.
+Click the fox icon at the top-right corner of your browser (next to the URL) and select Options.
+Select Proxies >Add New Proxy >Manual Proxy Configuration.
+Add 127.0.0.1 as the host IP address.
+Update the port to 8080 (Burp Suite’s default proxy settings).
+Under the General tab, rename the proxy to BurpSuite.
+
+Add a second new proxy:
+Add 127.0.0.1 as the host IP address.
+
+Update the port to 5555
+
+Under the General tab, rename the proxy to Postman
+
+Install Postman
+
+$ sudo wget https://dl.pstmn.io/download/latest/linux64 -O postman-linux-x64.tar.gz && sudo tar -xvzf postman-linux-x64.tar.gz -C /opt && sudo ln -s /opt/Postman/Postman /usr/bin/postman
+
+Install mitmproxy2swagger
+
+$ sudo pip3 install mitmproxy2swagger
+
+Install Git
+
+$ sudo apt-get install git
+
+
+
+ Install Docker
+
+$ sudo apt-get install docker.io docker-compose
+
+ 
+
+Install Go
+
+$ sudo apt install golang-go
+
+ 
+
+The JSON Web Token Toolkit v2
+
+$ cd /opt
+
+$ sudo git clone https://github.com/ticarpi/jwt_tool
+
+$ cd jwt_tool
+
+$ python3 -m pip install termcolor cprint pycryptodomex requests
+
+(Optional) Make an alias for jwt_tool.py
+
+$ sudo chmod +x jwt_tool.py
+
+$ sudo ln -s /opt/jwt_tool/jwt_tool.py /usr/bin/jwt_tool
+
+ 
+
+Install Kiterunner
+
+$ sudo git clone  https://github.com/assetnote/kiterunner.git
+
+$ cd kiterunner
+
+$ sudo make build
+
+$ sudo ln -s /opt/kiterunner/dist/kr /usr/bin/kr
+
+ 
+
+Install Arjun
+
+$ sudo git clone https://github.com/s0md3v/Arjun.git
+
+ 
+
+Install OWASP ZAP
+
+$ sudo apt install zaproxy
+
+Once ZAP is installed, make sure to navigate to the Manage Add-Ons (CTRL+U). Make sure to apply updates for the Fuzzer and OpenAPI Support.
+
+ 
+
+Useful Wordlists
+
+SecLists (https://github.com/danielmiessler/SecLists)
+
+$ sudo wget -c https://github.com/danielmiessler/SecLists/archive/master.zip -O SecList.zip \
+
+&& sudo unzip SecList.zip \
+
+&& sudo rm -f SecList.zip
+
+Hacking-APIs (https://github.com/hAPI-hacker/Hacking-APIs)
+
+$ sudo wget -c https://github.com/hAPI-hacker/Hacking-APIs/archive/refs/heads/main.zip -O HackingAPIs.zip \
+
+&& sudo unzip HackingAPIs.zip \
+
+&& sudo rm -f HackingAPIs.zip
+
+Once you have these tools installed and updated you should be ready to proceed to the next module.
+ 
